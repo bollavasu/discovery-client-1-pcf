@@ -1,0 +1,8 @@
+---
+applications:
+- name: spring-eureka-client-student-service2
+  instances: 1
+  host: spring-eureka-client-student-service2
+  path: target/spring-eureka-client-student-service-0.0.1-SNAPSHOT.jar
+  services:
+  - ServiceRegistry

@@ -1,0 +1,33 @@
+server:
+  port: 8098
+
+spring:
+  cloud:
+    services:
+      registrationMethod: route
+
+security:
+  basic:
+    enabled: false
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: https://eureka-74b895af-4aaa-424e-89f3-f0ac6bce6c9e.cfapps.io
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+     
+management:
+  security:
+    enabled: false
+
+logging:
+  level:
+    com.example.howtodoinjava: DEBUG
